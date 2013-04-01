@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureCSharpSpike", "AzureCSharpSpike\AzureCSharpSpike.ccproj", "{CEC4717F-70A4-434C-95DA-5FD8E2F139D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebRole1", "MvcWebRole1\MvcWebRole1.csproj", "{5BDD1591-E566-4C96-8463-08CBE70CE528}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole1", "WorkerRole1\WorkerRole1.csproj", "{37903DD1-578E-4840-9204-B623EBFF7DEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEC4717F-70A4-434C-95DA-5FD8E2F139D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEC4717F-70A4-434C-95DA-5FD8E2F139D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEC4717F-70A4-434C-95DA-5FD8E2F139D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEC4717F-70A4-434C-95DA-5FD8E2F139D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BDD1591-E566-4C96-8463-08CBE70CE528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDD1591-E566-4C96-8463-08CBE70CE528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDD1591-E566-4C96-8463-08CBE70CE528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BDD1591-E566-4C96-8463-08CBE70CE528}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37903DD1-578E-4840-9204-B623EBFF7DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37903DD1-578E-4840-9204-B623EBFF7DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37903DD1-578E-4840-9204-B623EBFF7DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37903DD1-578E-4840-9204-B623EBFF7DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
