@@ -1,14 +1,13 @@
-namespace WorkerRole1
+using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Queue;
+using System;
+using System.Diagnostics;
+using System.Net;
+using System.Threading;
+using Microsoft.WindowsAzure.ServiceRuntime;
+
+namespace WorkerRoleLib
 {
-    using System;
-    using System.Diagnostics;
-    using System.Net;
-    using System.Threading;
-
-    using Microsoft.WindowsAzure.ServiceRuntime;
-    using Microsoft.WindowsAzure.Storage;
-    using Microsoft.WindowsAzure.Storage.Queue;
-
     /// <summary>
     /// The base worker role.
     /// </summary>
@@ -36,6 +35,7 @@ namespace WorkerRole1
 
                 if (message != null)
                 {
+                    Trace.TraceInformation("Message Received");
                     try
                     {
                         this.OnPreMessageReceived(message);
@@ -85,11 +85,13 @@ namespace WorkerRole1
                 Queue = QueueClient.GetQueueReference("batatinhas");
                 Queue.CreateIfNotExists();
             }
-            catch (Exception e)
+            catch (Exception exception)
             {
-                Trace.TraceError("Exception Ocurred when starting worker role: {0}", e);
+                Trace.TraceError("Exception Ocurred when starting worker role: {0}", exception);
                 return false;
             }
+
+            Trace.TraceInformation("Worker Role Started");
 
             return base.OnStart();
         }
@@ -121,6 +123,7 @@ namespace WorkerRole1
         /// </param>
         protected virtual void OnPostMessageReceived(CloudQueueMessage message)
         {
+            Queue.DeleteMessage(message);
         }
 
         /// <summary>
